@@ -5,7 +5,7 @@ authorize spending a Kaspa UTXO — no signature, no key — using the KIP-16
 `OP_ZKPRECOMPILE` verifier shipped in the **Toccata** hard fork.
 
 **Live proof (Testnet-10):**
-[`ce84138050b214440354c89ab8a74437591ad853c7ab0471f5a7fe75bf35778c`]([https://kaspa.stream/tx/ce84138050b214440354c89ab8a74437591ad853c7ab0471f5a7fe75bf35778c](https://tn10.kaspa.stream/transactions/ce84138050b214440354c89ab8a74437591ad853c7ab0471f5a7fe75bf35778c?script=3763098394616786ecdcd73bfaef46141930e305896af1f6194dbae87f078ba3.0))
+[`ce84138050b214440354c89ab8a74437591ad853c7ab0471f5a7fe75bf35778c`](https://tn10.kaspa.stream/transactions/ce84138050b214440354c89ab8a74437591ad853c7ab0471f5a7fe75bf35778c?script=3763098394616786ecdcd73bfaef46141930e305896af1f6194dbae87f078ba3.0)
 — confirmed on-chain, recognized by the explorer as a ZK precompile spend
 (verification tag `0x21`, R0Succinct), witness contains proof data and **no
 signature**.
