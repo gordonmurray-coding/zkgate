@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["host", "methods"]
+
+[workspace.dependencies]
+risc0-zkvm = "3.0"
+risc0-build = "3.0"
+
+# Faster local proving; harmless to keep.
+[profile.release]
+opt-level = 3
