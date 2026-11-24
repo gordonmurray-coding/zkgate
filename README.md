@@ -16,6 +16,15 @@ signature**.
 > grows into a real one — but this is **not** a private-payments system yet, and
 > nothing here should touch mainnet value.
 
+> **⚠ Security warning (2026-11-24): do not use, do not lock funds here.** zkgate verifies with Kaspa's native
+> RISC Zero STARK precompile, tag `0x21` (`R0Succinct`). After RISC Zero advisory
+> [GHSA-g6qg-9j8p-7j87](https://github.com/risc0/risc0/security/advisories/GHSA-g6qg-9j8p-7j87), Kaspa treats that
+> path as **unsound and deprecated**. Consensus pins RISC Zero's 4.0.4 recursion circuit, which a proof can satisfy
+> without the claimed execution being valid. The fix needs a hard fork
+> ([rusty-kaspa #1176](https://github.com/kaspanet/rusty-kaspa/pull/1176)). **Anything locked at a zkgate address
+> can be unlocked with a forged proof.** The code here has not been ported to the sound Groth16 path (tag `0x20`
+> with `kaspa-txscript-zk-sdk` 2.2.0 and RISC Zero 3.1.0). Treat it as a historical demonstration only.
+
 ## What it proves works
 
 Post-Toccata, Kaspa L1 can gate a covenant spend on a ZK proof. Concretely,
